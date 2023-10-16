@@ -1,14 +1,16 @@
 .mainPage {
+  flex: 1;
   display: grid;
+  grid-template-rows: minmax(64px, auto) auto;
+  grid-auto-rows: min-content;
 }
 
 .select {
   margin-left: 29px;
   width: 181px;
   height: 43px;
-  margin-bottom: 21px;
 
   @media (max-width: 530px) {
-    margin: 0 auto 21px;
+    margin: 0 auto;
   }
 }
