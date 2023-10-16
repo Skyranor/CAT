@@ -4,6 +4,11 @@ import { useEffect, useMemo, useState } from 'react';
 import { useGetCurrencyListQuery } from '../api/currencyApi';
 import { CurrencyRow } from '@/entities/Currency';
 
+interface CurrencyOption {
+  label: string;
+  value: string;
+}
+
 interface CurrencySelectProps {
   className?: string;
 }
@@ -20,15 +25,11 @@ export function CurrencySelect({ className }: CurrencySelectProps) {
     [currencies]
   );
 
-  const [selectedCurrency, setSelectedCurrency] = useState<{
-    label: string;
-    value: string;
-  } | null>(null);
+  const [selectedCurrency, setSelectedCurrency] =
+    useState<CurrencyOption | null>(null);
 
   useEffect(() => {
-    if (options.length > 0) {
-      setSelectedCurrency(options[0]);
-    }
+    setSelectedCurrency(options[0]);
   }, [options]);
 
   return (
