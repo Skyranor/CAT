@@ -1,0 +1,43 @@
+.header {
+  max-width: 100%;
+  width: 100%;
+  // display: flex;
+  // align-items: flex-start;
+  padding: 0 29px;
+
+  @media (max-width: 530px) {
+    padding: 10px;
+    // align-items: center;
+  }
+}
+
+.logoBlock {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  @media (max-width: 530px) {
+    justify-content: center;
+  }
+}
+
+.logoTitle {
+  color: var(--color-dark);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  @media (max-width: 530px) {
+    // justify-content: space-between;
+  }
+}
+
+.logoDescription {
+  max-width: min-content;
+  color: var(--color-dark);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
