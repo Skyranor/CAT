@@ -1,27 +1,50 @@
-# React + TypeScript + Vite
+# Используемые библиотеки и технологии
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- React
+- Typescript
+- Redux Toolkit
+- React Router
+- React Select
+- Vite
+- SCSS/CSS Modules
+- ESLint/Prettier
+- Feature Sliced Design
 
-Currently, two official plugins are available:
+### Хорошие практики написания кода:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Придерживался соглашений по именованию переменных и компонентов, используя camelCase для переменных и PascalCase для компонентов.
+Разделил код на маленькие и независимые компоненты, что сделало его более читаемым и поддерживаемым.
 
-## Expanding the ESLint configuration
+### Масштабируемость:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Организовал компоненты так, чтобы их можно было легко расширить в будущем. Каждый компонент выполняет конкретную задачу и может быть использован повторно в других частях проекта.
+Использовали менеджер состояния (Redux) для управления состоянием приложения, что облегчило добавление новых функций и поддержку при росте проекта.
+Применил архитектуру Feature Sliced Design для упрощения разделения кода на маленькие и независимые компоненты.
 
-- Configure the top-level `parserOptions` property like this:
+### Надежность:
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+обработал возможные ошибки при запросах к API Coinbase, чтобы обеспечить стабильную работу приложения при непредвиденных ситуациях.
+Добавили проверки на наличие данных перед их использованием, чтобы избежать ошибок.
+Использовал TypeScript для типизации и ограничения возможных ошибок.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Вспомогательные утилиты, библиотеки и технологии:
+
+Использовал библиотеку RTK Query для выполнения HTTP-запросов к API Coinbase.
+React-Select для выбора валюты.
+React-Router для определения маршрута приложения.
+clsx для удобного создания CSS-классов.
+Vite для быстрой сборки проекта.
+
+### Другие техники:
+
+Применил SCSS для стилизации компонентов в соответствии с макетом.
+Организовали проект так, чтобы каждая часть выполняла свою функцию и могла быть переиспользована в других проектах.
+Применил ESLint для проверки кода и Prettier для форматирования.
+
+### Впечатления от задачи
+
+Было интересно выполнить что-то нестандартное + познакомился с FSD
+
+### Затраченное время
+
+3 рабочих дня
